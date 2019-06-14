@@ -1,8 +1,8 @@
 import React from "react";
 import {Editor, EditorState} from "draft-js";
+import 'draft-js/dist/Draft.css';
 
-
-class Draft extends React.Component{
+class Draftss extends React.Component{
   constructor(props) {
     super(props);
     this.state = {editorState: EditorState.createEmpty()};
@@ -15,10 +15,10 @@ class Draft extends React.Component{
   }
 }
 
-function draft() {
+function Draft() {
   return(
-      <Draft/>
+      <Draftss />
   )
 }
 
-export default Draft
+export default Draft;
