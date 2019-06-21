@@ -41,31 +41,30 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/*<img src={logo} className="App-logo" alt="logo" />*/}
-        {/*<p>*/}
-          {/*Edit <code>src/App.js</code> and save to reload.*/}
-        {/*</p>*/}
-        {/*<span>hello  { name }</span>*/}
-        {/*<h2>*/}
-          {/*hello,{formatName(user)}!*/}
-        {/*</h2>*/}
-        {/*<a*/}
-          {/*className="App-link"*/}
-          {/*href="https://reactjs.org"*/}
-          {/*target="_blank"*/}
-          {/*rel="noopener noreferrer"*/}
-        {/*>*/}
-          {/*Learn React*/}
-        {/*</a>*/}
-        {/*<form target="_blank" action="https://google.com/search">*/}
-          {/*<div>Enter input and click Search</div>*/}
-          {/*<input className="big-input" name="q" />*/}
-          {/*<Buttons label="Search" />*/}
-        {/*</form>*/}
-        {/*<Antd/>*/}
-        {/*<List/>*/}
-        {/*/!*<Button type="primary">Primary</Button>*!/*/}
-        <Draftss/>
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <span>hello  { name }</span>
+        <h2>
+          hello,{formatName(user)}!
+        </h2>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+        <form target="_blank" action="https://google.com/search">
+          <div>Enter input and click Search</div>
+          <input className="big-input" name="q" />
+          <Buttons label="Search" />
+        </form>
+        <Antd/>
+        <List/>
+        {/*<Button type="primary">Primary</Button>*/}
       </header>
     </div>
   );

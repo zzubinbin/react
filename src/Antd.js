@@ -475,7 +475,7 @@ class TemperatureInput extends React.Component{
     return (
       <fieldset>
         <legend>Enter temperature in {scaleNumbers[sceale]}:</legend>
-        <input value={temperature} onChange={this.handleChange}/>
+        <input value={temperature} onChange={this.handleChange} />
       </fieldset>
     )
   }
@@ -506,12 +506,69 @@ class Draft extends React.Component{
   }
 }
 
-
+class Content extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      temperature: '111'
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  componentWillMount() {
+    //在渲染前调用,在客户端也在服务端。
+    //发送请求 获取页面渲染所需要的数据
+    console.log('Component WILL MOUNT!')
+  }
+  componentDidMount() {
+    //在第一次渲染后调用，只在客户端
+    //页面组件渲染后进行的操作
+    console.log('Component DID MOUNT!')
+  }
+  //自定义事件
+  handleChange(e){
+    this.setState({
+      temperature: e.target.value
+    })
+  }
+  componentWillReceiveProps(newProps) {
+    // prop (更新后)时被调用。
+    // 进行相应的处理
+    console.log('Component WILL RECEIVE PROPS!')
+  }
+  shouldComponentUpdate(newProps, newState) {
+    //返回一个布尔值。在组件接收到新的props或者state时被调用。
+    return true;
+  }
+  componentWillUpdate(nextProps, nextState) {
+    //在组件接收到新的props或者state但还没有render时被调用
+    // 接收新的props 或 state 时进行计算等操作
+    console.log('Component WILL UPDATE!');
+  }
+  componentDidUpdate(prevProps, prevState) {
+    // 新的组件更新后 区别于第一次更新 componentDidMount
+    //在组件完成更新后立即调用。在初始化时不会被调用。
+    console.log('Component DID UPDATE!')
+  }
+  componentWillUnmount() {
+    // 组件卸载
+    //在组件从 DOM 中移除之前立刻被调用。
+    console.log('Component WILL UNMOUNT!')
+  }
+  render() {
+    return (
+        <div>
+          <h1>这里是生命周期</h1>
+          <h3>{this.state.temperature}</h3>
+        </div>
+    );
+  }
+}
 
 
 function Antd() {
   return (
       <div>
+        <Content />
         <div>
           <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
             <Option value="jack">Jack</Option>

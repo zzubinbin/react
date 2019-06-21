@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "draft-js": "latest",
     "draft.js": "^0.2.0",
+    "draftjs-to-html": "^0.8.4",
+    "html-to-draftjs": "^1.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "draft-js": "latest"
+    "react-draft-wysiwyg": "^1.13.2",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

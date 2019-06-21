@@ -1,7 +1,54 @@
 import React from 'react';
 import './App.css';
 import "antd/dist/antd.css";
-import { Table, Divider, Tag } from 'antd';
+import {Table, Divider, Tag} from 'antd';
+
+const Button = ({color, text}) => {
+  return {
+    type: 'button',
+    props: {
+      className: 'btn btn-${color}',
+      children: [{
+        type: 'em',
+        props: {
+          children: text
+        }
+      }]
+    }
+  }
+};
+// const data = {
+//   name: 'foo',
+//   value: 'bar'
+// };
+// const component = <Component {...data} />;
+
+// 如果要使用html自定义属性 要使用data-前缀
+{/*<div data-attr="xxx">content</div>*/}
+
+// const person = <Person name={isLoggin ? name : ''} />;
+//
+// const person1 = React.createElement(
+//     Person,
+//     {name: isLoggedIn ? name: ''}
+// );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const columns = [
   {
@@ -46,7 +93,7 @@ const columns = [
     render: (text, record) => (
         <span>
         <a href="javascript:;">Invite {record.name}</a>
-        <Divider type="vertical" />
+        <Divider type="vertical"/>
         <a href="javascript:;">Delete</a>
       </span>
     ),
@@ -204,8 +251,8 @@ const data = [
 ];
 
 function List() {
-  return(
-      <Table columns={columns} dataSource={data} />
+  return (
+      <Table columns={columns} dataSource={data}/>
   )
 }
 
