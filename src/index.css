@@ -30,3 +30,14 @@ code {
   margin-top: 20px;
   margin-left: 10px;
 }
+.count h2 {
+  margin-left: 40px;
+}
+.count button{
+  font-size: 20px;
+}
+.count-span {
+  width: 30px;
+  font-size: 20px;
+  margin: 0 20px;
+}
