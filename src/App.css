@@ -33,3 +33,9 @@
     transform: rotate(360deg);
   }
 }
+
+#saleBooking {
+  display: inline-block;
+  width: 200px;
+  margin: 5px;
+}

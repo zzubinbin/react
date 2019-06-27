@@ -1,94 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Test from './test';
+import Draft from './Draft';
+import SaleShop from './SaleShop'
+import App from './App'
 import * as serviceWorker from './serviceWorker';
-import {Editor, EditorState, RichUtils} from 'draft-js';
-// import { createStore } from 'redux';
 
-/**
- * 这是一个 reducer，形式为 (state, action) => state 的纯函数。
- * 描述了 action 如何把 state 转变成下一个 state。
- *
- * state 的形式取决于你，可以是基本类型、数组、对象、
- * 甚至是 Immutable.js 生成的数据结构。惟一的要点是
- * 当 state 变化时需要返回全新的对象，而不是修改传入的参数。
- *
- * 下面例子使用 `switch` 语句和字符串来做判断，但你可以写帮助类(helper)
- * 根据不同的约定（如方法映射）来判断，只要适用你的项目即可。
- */
-// function counter(state = 0, action) {
-//   switch (action.type) {
-//     case 'INCREMENT':
-//       return state + 1;
-//     case 'DECREMENT':
-//       return state - 1;
-//     default:
-//       return state;
-//   }
-// }
-
-// 创建 Redux store 来存放应用的状态。
-// API 是 { subscribe, dispatch, getState }。
-// let store = createStore(counter);
-
-// 可以手动订阅更新，也可以事件绑定到视图层。
-// store.subscribe(() =>
-//     console.log(store.getState())
-// );
-
-// 改变内部 state 惟一方法是 dispatch 一个 action。
-// action 可以被序列化，用日记记录和储存下来，后期还可以以回放的方式执行
-// store.dispatch({ type: 'INCREMENT' });
-// // 1
-// store.dispatch({ type: 'INCREMENT' });
-// // 2
-// store.dispatch({ type: 'DECREMENT' });
-// 1
-
-ReactDOM.render(<App />, document.getElementById('root'));
-//
-// class MyEditor extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       editorState: EditorState.createEmpty()
-//     };
-//     this.onChange = (editorState) => this.setState({editorState});
-//     this.handleKeyCommand = this.handleKeyCommand.bind(this);
-//     this._onBoldClick = this._onBoldClick.bind(this);
-//   }
-//   handleKeyCommand(command, editorState) {
-//     const newState = RichUtils.handleKeyCommand(editorState, command);
-//     if (newState) {
-//       this.onChange(newState);
-//       console.log(newState);
-//       return 'handled';
-//     }
-//     return 'not-handled';
-//   }
-//   _onBoldClick() {
-//     this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'));
-//   }
-//   render() {
-//     return (
-//         <div>
-//           <button onClick={this._onBoldClick}>Bold</button>
-//           <Editor
-//               editorState={this.state.editorState}
-//               handleKeyCommand={this.handleKeyCommand}
-//               onChange={this.onChange}
-//           />
-//         </div>
-//     );
-//   }
-// }
-//
-// ReactDOM.render(
-//     <MyEditor />,
-//     document.getElementById('root')
-// );
-
+ReactDOM.render(<SaleShop />, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

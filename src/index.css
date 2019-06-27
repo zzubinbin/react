@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  border: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.editor-button {
+  display: block;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.editor-button button {
+  margin: 0px 5px;
+}
+.editor-body {
+  display: block;
+  overflow: auto;
+  width: 80%;
+  height: 400px;
+  border: darkgrey solid 1px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
